@@ -8,6 +8,16 @@ class GeneticAlgorithm( object ):
 	Classe de implementação do algoritmos genéticos
 	'''
 
+	# Attributes
+	populationAmount = 0
+	genesAmount = 0
+	generations = 0
+	crossingRate = 0
+	mutationRate = 0
+
+	colors = {}
+	population = []
+
 	'''
 	Construtor da classe
 	'''
@@ -28,6 +38,7 @@ class GeneticAlgorithm( object ):
 	def __repr__( self ):
 		pass
 
+	# Main method from genetic algorithm
 	'''
 	Função que executa o loop do AG
 	'''
@@ -39,15 +50,18 @@ class GeneticAlgorithm( object ):
 
 			selection()
 
+	'''
+	Faz a distribuição da porcentagem relativa de seleção para cada cromossomo
+	baseado em seu fitness
+	'''
 	def _roulette( self ):
 		pass
 
+	# Methods
 	'''
 	Inicializa a população com valores aleatórios para seus genes
 	'''
 	def initPopulation( self ):
-		self.population = []
-
 		for i in range( self.populationAmount ):
 			chromosome = ""
 
@@ -63,7 +77,7 @@ class GeneticAlgorithm( object ):
 		pass
 
 	'''
-
+	Realiza a seleção dos filhos que farão parte da população
 	'''
 	def selection( self ):
 		pass
