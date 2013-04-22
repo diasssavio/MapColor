@@ -39,6 +39,9 @@ class GeneticAlgorithm( object ):
 
 			selection()
 
+	def _roulette( self ):
+		pass
+
 	'''
 	Inicializa a população com valores aleatórios para seus genes
 	'''
@@ -53,14 +56,20 @@ class GeneticAlgorithm( object ):
 
 			self.population.append( chromosome )
 
+	'''
+	Calcula a aptidão de todos os individuos da população
+	'''
+	def fitness( self ):
+		pass
+
+	'''
+
+	'''
+	def selection( self ):
+		pass
+
 	def crossing( self ):
 		pass
 
 	def mutation( self ):
-		pass
-
-	def fitness( self ):
-		pass
-
-	def selection( self ):
 		pass
