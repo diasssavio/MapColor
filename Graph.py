@@ -6,6 +6,9 @@ class Graph:
 	Classe de representação de um grafo
 	'''
 
+	vertexes = []
+	edges = []
+
 	def __init__( self ):
 		self.vertexes = []
 		self.edges = []
