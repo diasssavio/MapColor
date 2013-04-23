@@ -6,12 +6,18 @@ class Graph:
 	Classe de representação de um grafo
 	'''
 
+<<<<<<< HEAD
 	vertexes = []
 	edges = []
 
 	def __init__( self ):
 		self.vertexes = []
 		self.edges = []
+=======
+	# Attributes
+	vertexes = []
+	edges = []
+>>>>>>> [Updated] Graph & GeneticAlgorithm
 
 	def __init__( self, vertexes, edges ):
 		self.vertexes = vertexes
@@ -22,3 +28,24 @@ class Graph:
 
 	def adjacencyMatrix( self ):
 		adjacencyMatrix = []
+		for vertex in vertexes:
+			line = []
+			adjacent = getAdjacent( vertex )
+			for adj in adjacent:
+				line.append(  )
+
+			adjacentMatrix.append( line )
+
+	'''
+
+	'''
+	def getAdjacent( self, vertex ):
+		adjacent = []
+
+		for edge in self.edges:
+			if edge[0] == vertex:
+				adjacent.append( edge[0] )
+			elif edge[1] == vertex:
+				adjacent.append( edge[1] )
+
+		return adjacent

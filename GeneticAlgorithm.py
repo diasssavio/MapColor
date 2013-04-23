@@ -14,19 +14,29 @@ class GeneticAlgorithm( object ):
 	generations = 0
 	crossingRate = 0
 	mutationRate = 0
+<<<<<<< HEAD
 
 	colors = {}
 	population = []
 
+=======
+	adjacency = []
+	colors = {}
+
+	population = []
+
+
+>>>>>>> [Updated] Graph & GeneticAlgorithm
 	'''
 	Construtor da classe
 	'''
-	def __init__( self, populationAmount, genesAmount, generations, crossingRate, mutationRate ):
+	def __init__( self, populationAmount, genesAmount, generations, crossingRate, mutationRate, adjacency ):
 		self.populationAmount = populationAmount
 		self.genesAmount = genesAmount
 		self.generations = generations
 		self.crossingRate = crossingRate
 		self.mutationRate = mutationsRate
+		self.adjacency = adjacency
 
 		self.colors = { 0 : 'Vermelho', 1 : 'Verde', 2 : 'Azul', 3 : 'Amarelo' }
 
@@ -46,7 +56,7 @@ class GeneticAlgorithm( object ):
 		self.initPopulation()
 
 		for i in range( self.generations ):
-			self.fitness()
+			self.fitness( self.population )
 
 			selection()
 
@@ -73,8 +83,15 @@ class GeneticAlgorithm( object ):
 	'''
 	Calcula a aptidão de todos os individuos da população
 	'''
-	def fitness( self ):
-		pass
+	def fitness( self, population ):
+		# Iterating through population
+		for chromosome in population:
+			chromosomeFit = 0
+
+			# Iterating through genes in chromosome
+			for gene in chromosome:
+				
+				
 
 	'''
 	Realiza a seleção dos filhos que farão parte da população
