@@ -6,9 +6,11 @@ class Graph:
 	Classe de representação de um grafo
 	'''
 
+	# Attributes
 	vertexes = []
 	edges = []
 
+	# Methods
 	def __init__( self, vertexes, edges ):
 		self.vertexes = vertexes
 		self.edges = edges
@@ -16,26 +18,27 @@ class Graph:
 	def __repr__( self ):
 		pass
 
+	'''
+	Matriz de adjacencias que representa o grafo
+	'''
 	def adjacencyMatrix( self ):
-		adjacencyMatrix = []
-		for vertex in vertexes:
-			line = []
-			adjacent = getAdjacent( vertex )
-			for adj in adjacent:
-				line.append(  )
+		matrix = []
 
-			adjacentMatrix.append( line )
+		for vertex in self.vertexes:
+			matrix.append( getAdjacent( vertex ) )
+
+		return matrix
 
 	'''
-
+	Obtem um vetor com as adjacencias ao vertice passado
 	'''
 	def getAdjacent( self, vertex ):
 		adjacent = []
 
-		for edge in self.edges:
-			if edge[0] == vertex:
-				adjacent.append( edge[0] )
-			elif edge[1] == vertex:
-				adjacent.append( edge[1] )
+		for aux in self.vertexes:
+			if aux[0] == vertex or aux[1] == vertex:
+				adjacent.append( 1 )
+			else:
+				adjacent.append( 0 )
 
 		return adjacent
