@@ -6,18 +6,8 @@ class Graph:
 	Classe de representação de um grafo
 	'''
 
-<<<<<<< HEAD
 	vertexes = []
 	edges = []
-
-	def __init__( self ):
-		self.vertexes = []
-		self.edges = []
-=======
-	# Attributes
-	vertexes = []
-	edges = []
->>>>>>> [Updated] Graph & GeneticAlgorithm
 
 	def __init__( self, vertexes, edges ):
 		self.vertexes = vertexes

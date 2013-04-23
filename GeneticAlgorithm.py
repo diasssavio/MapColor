@@ -14,19 +14,11 @@ class GeneticAlgorithm( object ):
 	generations = 0
 	crossingRate = 0
 	mutationRate = 0
-<<<<<<< HEAD
 
-	colors = {}
-	population = []
-
-=======
 	adjacency = []
 	colors = {}
-
 	population = []
-
-
->>>>>>> [Updated] Graph & GeneticAlgorithm
+	
 	'''
 	Construtor da classe
 	'''
